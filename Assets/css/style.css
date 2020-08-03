@@ -1,0 +1,26 @@
+
+button, input{
+    max-height: 50px;
+    height: 40px;
+}
+
+.banner {
+    background-color: lightblue;
+}
+
+button{
+    width: 50px;
+    padding: 10px;
+}
+
+ul {
+    margin-top: 50px;
+}
+
+.weather-card{
+    border-radius: 3px;
+    border-color: black;
+    border-style: solid;
+    height: 300px;
+    padding: 10px;
+}
