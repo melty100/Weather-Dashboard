@@ -61,8 +61,9 @@ function getForcast(city){
 
             console.log(uvResponse);
             $("#city-uvIndex").html("UV Index of <span id=\"uv-scale\">" + uvResponse.value + "</span>");
+
             let uvColor;
-            uvResponse.value >= uvIndexColorCodes.length ? uvColorIndex = uvIndexColorCodes.length - 1 : uvColor = Math.floor(uvResponse.value);
+            uvResponse.value >= uvIndexColorCodes.length ? uvColor = uvIndexColorCodes.length - 1 : uvColor = Math.floor(uvResponse.value);
             $("#uv-scale").css("background-color", uvIndexColorCodes[uvColor]);
             $("#uv-scale").css("color", "white");
         });
