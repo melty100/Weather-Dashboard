@@ -5,7 +5,8 @@ button, input{
 }
 
 .banner {
-    background-color: lightblue;
+    background-color: black;
+    color: white;
 }
 
 button{
@@ -13,14 +14,46 @@ button{
     padding: 10px;
 }
 
-ul {
-    margin-top: 50px;
-}
-
 .weather-card{
+    margin-top: 20px;
     border-radius: 3px;
     border-color: black;
     border-style: solid;
-    height: 300px;
     padding: 10px;
+}
+
+.forecast-card{
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 3px;
+    border-color: black;
+    border-style: solid;
+
+}
+
+.input-group{
+    margin-bottom: 30px;
+}
+
+.card-header {
+    background-color: black;
+    color: white;
+}
+
+.forecasted {
+    background-color: lightblue;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 25px;
+    text-align: center;
+    width: auto;
+}
+
+.card {
+    margin-top: 25px;
+}
+
+img {
+    max-height: 40px;
+    max-width: 40px;
 }

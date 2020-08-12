@@ -1,16 +1,19 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="Assets/css/style.css">
     <title>weather dash</title>
-  </head>
-  <body>
+</head>
+
+<body>
 
     <div class="container-fluid">
 
@@ -24,32 +27,38 @@
 
         <div class="row">
             <div class="col-md-3">
-                <div class="myNav">
-                    <h3>Search for a City</h3>
-                    <form id="search-form" role="search" class="bd-search d-flex align-items-center">
-                        <input type="text" id="search-input" name="search">
-                        <button id="search-btn" class="btn btn-primary btn-lg"></button>
-                    </form>
+                <h3>Search for a City</h3>
 
-                    <ul class="list-group">
-                        <li class="list-group-item">Austin</li>
-                        <li class="list-group-item">Chicago</li>
-                        <li class="list-group-item">New York</li>
-                        <li class="list-group-item">Orlando</li>
-                        <li class="list-group-item">San Francisco</li>
-                      </ul>
-                </div>
+                <div class="input-group">
+                    <input id="search-input" type="text" class="form-control" placeholder="City's Name, Country Code" aria-label="" aria-describedby="button-addon4">
+                    <div class="input-group-append" id="button-addon4">
+                      <button id="search-btn" class="btn btn-primary" type="button"></button>
+                    </div>
+                  </div>
+
+                <ul id="searched-cities" class="list-group">   
+                </ul>
             </div>
             <div class="col-md 9">
-                <div class="weather-card">
-                    <h2 id="city-date">City Name and Date</h2>
-                    <h3 id="city-temp">temp</h3>
-                    <h3 id="city-humidity">humid</h3>
-                    <h3 id="city-windspeed">winds</h3>
-                    <h3 id="city-uvIndex">uv</h3>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 id="weather-card-header"></h3>
+                    </div>
+                    <div id="weather-card" class="card-body">
+                        <p></p>
+                    </div>
                 </div>
-                <div class="forecast-card">
-                    <h2>5-day Forecast</h2>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>5 Day Forecast</h3>
+                    </div>
+                    <div id="forecast-card" class="card-body">
+                        <div class="container-fluid">
+                            <div id="forecasting-row" class="row">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -61,10 +70,18 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="Assets/js/script.js"></script>
-  </body>
+</body>
+
 </html>
